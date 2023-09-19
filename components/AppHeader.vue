@@ -1,5 +1,5 @@
 <template>
-  <header class="py-3">
+  <header class="py-5">
     <div>
       <div class="flex items-center">
         <img
