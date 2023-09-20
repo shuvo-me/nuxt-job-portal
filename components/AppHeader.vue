@@ -1,8 +1,6 @@
 <template>
   <header class="py-5">
-    <div
-      class="flex justify-between items-center border-b border-gray-200 pb-3"
-    >
+    <div class="flex justify-between items-center pb-3">
       <div class="flex items-center">
         <img
           src="~/assets/images/app-logo.png"
@@ -47,9 +45,12 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="mt-3">
       <form action="">
-        <app-search placeholder="Search ui/ux designer" :required="false" />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4">
+          <app-search placeholder="Search ui/ux designer" :required="false" />
+          <app-select />
+        </div>
       </form>
     </div>
   </header>
