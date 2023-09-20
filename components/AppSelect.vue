@@ -7,13 +7,13 @@
     </span>
     <select
       id="countries"
-      class="text-sm rounded-lg w-full bg-transparent p-3 outline-none text-[1.3rem] text-gray-900"
+      class="rounded-lg w-full bg-transparent p-3 outline-none text-[1.3rem] text-gray-900"
     >
-      <option selected class="text-gray-400">Choose a country</option>
-      <option value="US">United States</option>
-      <option value="CA">Canada</option>
-      <option value="FR">France</option>
-      <option value="DE">Germany</option>
+      <option selected class="text-gray-400">Job Type</option>
+      <option value="freelance">Freelance</option>
+      <option value="remote">Remote</option>
+      <option value="contract">Contract</option>
+      <option value="on-site">On site</option>
     </select>
   </div>
 </template>
