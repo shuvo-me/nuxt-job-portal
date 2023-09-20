@@ -47,7 +47,11 @@
         </div>
       </div>
     </div>
-    <div></div>
+    <div>
+      <form action="">
+        <app-search placeholder="Search ui/ux designer" :required="false" />
+      </form>
+    </div>
   </header>
 </template>
 
