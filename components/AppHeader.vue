@@ -1,6 +1,6 @@
 <template>
-  <header class="py-5">
-    <div class="flex justify-between items-center pb-3">
+  <header class="py-5 bg-white">
+    <nav class="flex justify-between items-center pb-3 px-4">
       <div class="flex items-center">
         <img
           src="~/assets/images/app-logo.png"
@@ -44,7 +44,7 @@
           />
         </div>
       </div>
-    </div>
+    </nav>
     <div class="mt-3 bg-gray-50 p-10">
       <form action="">
         <div
