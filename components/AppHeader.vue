@@ -50,7 +50,10 @@
         <div
           class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-10 lg:gap-y-0"
         >
-          <app-search placeholder="Search ui/ux designer" :required="false" />
+          <app-search
+            placeholder="Web development in chicago"
+            :required="false"
+          />
 
           <div
             class="flex items-center flex-wrap md:flex-nowrap gap-x-4 gap-y-5 lg:gap-y-0"
