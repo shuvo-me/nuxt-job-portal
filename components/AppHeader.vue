@@ -45,11 +45,24 @@
         </div>
       </div>
     </div>
-    <div class="mt-3">
+    <div class="mt-3 bg-gray-50 p-10">
       <form action="">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-10 lg:gap-y-0"
+        >
           <app-search placeholder="Search ui/ux designer" :required="false" />
-          <app-select />
+
+          <div
+            class="flex items-center flex-wrap md:flex-nowrap gap-x-4 gap-y-5 lg:gap-y-0"
+          >
+            <app-select />
+            <location-search />
+            <button
+              class="py-2 px-8 rounded-md text-[1.6rem] text-white bg-emerald-600"
+              v-text="'Search'"
+              type="submit"
+            />
+          </div>
         </div>
       </form>
     </div>
