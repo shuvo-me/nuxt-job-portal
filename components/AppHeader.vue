@@ -58,8 +58,15 @@
           <div
             class="flex items-center flex-wrap md:flex-nowrap gap-x-4 gap-y-5 lg:gap-y-0"
           >
-            <app-select />
-            <location-search />
+            <app-select
+              icon-class="bi bi-funnel"
+              option-title="Filter by work type"
+            />
+            <app-select
+              icon-class="bi bi-funnel"
+              option-title="Filter by level"
+              :options="[]"
+            />
             <button
               class="py-2 px-8 rounded-md text-[1.6rem] text-white bg-emerald-600"
               v-text="'Search'"
@@ -73,7 +80,6 @@
 </template>
 
 <script>
-export default {};
 </script>
 
 <style>
