@@ -10,7 +10,10 @@
 </template>
 
 <script setup lang="ts">
+import { JobDataTypes } from "~/types";
+
 defineProps<{
-  jobLists: Array<any>;
+  jobLists: JobDataTypes[] | null;
+  pending: boolean;
 }>();
 </script>

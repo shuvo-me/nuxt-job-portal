@@ -57,3 +57,14 @@ export interface JobDataTypes {
     "job_onet_soc": string,
     "job_onet_job_zone": string
   }
+
+ export interface ResponseTypes {
+    data: Array<JobDataTypes>;
+    parameters: {
+      num_pages: number;
+      page: number;
+      query: string;
+    };
+    request_id: string;
+    status: string;
+  }

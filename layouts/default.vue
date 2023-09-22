@@ -3,7 +3,7 @@
     <app-header />
 
     <div class="bg-gray-50 p-2">
-      <jobs-sidebar />
+      <jobs-sidebar :job-lists="data" :pending="pending" />
       <slot />
     </div>
     <!-- <footer>Footer</footer> -->
@@ -11,11 +11,12 @@
 </template>
 
 <script setup lang="ts">
-import { JobDataTypes } from "~/types";
+import { ResponseTypes } from "~/types";
 const runtimeConfig = useRuntimeConfig();
+
 const { data, pending } = await useAsyncData(
   "sidebar-jobs",
-  (): Promise<Array<JobDataTypes>> =>
+  (): Promise<ResponseTypes> =>
     $fetch("https://jsearch.p.rapidapi.com/search", {
       params: {
         query: "frontend developer ",
@@ -30,6 +31,7 @@ const { data, pending } = await useAsyncData(
   {
     lazy: true,
     server: false,
+    transform: (jobs) => jobs.data,
   }
 );
 </script>
