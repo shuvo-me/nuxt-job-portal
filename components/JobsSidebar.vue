@@ -10,4 +10,7 @@
 </template>
 
 <script setup lang="ts">
+defineProps<{
+  jobLists: Array<any>;
+}>();
 </script>
