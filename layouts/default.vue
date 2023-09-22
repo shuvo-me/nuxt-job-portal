@@ -2,7 +2,7 @@
   <app-container extra-class="mt-[80px] rounded-md">
     <app-header />
 
-    <div class="bg-gray-50 p-2">
+    <div class="bg-gray-50 p-2 flex">
       <jobs-sidebar :job-lists="data" :pending="pending" />
       <slot />
     </div>
