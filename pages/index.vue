@@ -2,8 +2,10 @@
   <div>home page</div>
 </template>
 
-<script>
-export default {};
+<script setup lang="ts">
+definePageMeta({
+  title: "JobScout",
+});
 </script>
 
 <style>
