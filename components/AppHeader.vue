@@ -12,9 +12,9 @@
         />
         <h4 class="text-zinc-900 text-[2rem] font-semibold">JobScout</h4>
       </div>
-      <div class="flex items-center gap-x-4">
+      <div class="flex items-center gap-x-2">
         <ul
-          class="flex items-center gap-x-[2rem] border-r border-gray-300 pr-[2rem]"
+          class="flex items-center gap-x-5 border-r border-gray-300 pr-[2rem]"
         >
           <li>
             <span role="button" class="text-[2rem] text-black font-bold">
@@ -38,7 +38,7 @@
           <img
             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
             alt="profile img"
-            class="h-[3.5rem] w-[3.5rem] rounded-full object-cover"
+            class="h-[3rem] w-[3rem] rounded-full object-cover"
           />
         </div>
       </div>
