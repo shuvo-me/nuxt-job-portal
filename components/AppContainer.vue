@@ -1,5 +1,5 @@
 <template>
-  <div :class="`max-w-[1100px] px-5  mx-auto ${extraClass} `">
+  <div :class="`max-w-[1250px] px-5  mx-auto ${extraClass} `">
     <slot />
   </div>
 </template>
