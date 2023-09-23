@@ -2,8 +2,14 @@
   <app-container extra-class="mt-[80px] rounded-md">
     <app-header />
 
-    <div class="bg-gray-50 p-2 flex">
-      <jobs-sidebar :job-lists="data" :pending="pending" :page="page" />
+    <div class="bg-gray-50 p-2 flex max-h-[calc(100vh-40%)] overflow-y-auto">
+      <jobs-sidebar
+        :job-lists="data"
+        :pending="pending"
+        :page="page"
+        @prev="page--"
+        @next="page++"
+      />
       <slot />
     </div>
     <!-- <footer>Footer</footer> -->

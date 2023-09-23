@@ -6,22 +6,24 @@
         v-text="'Related Jobs'"
       />
       <div class="flex items-center gap-x-2">
-        <small
+        <button
           class="bg-blue-50 text-blue-600 w-[2rem] h-[2rem] rounded-md flex items-center justify-center text-[1.4rem]"
-          role="button"
+          type="button"
           @click="$emit('prev')"
+          :disabled="page === 1"
         >
           <i class="i-heroicons-chevron-left-20-solid" />
-        </small>
+        </button>
 
-        <small class="text-[1.3rem]" v-text="`${page}/3`" />
-        <small
+        <small class="text-[1.3rem]" v-text="`${page}/5`" />
+        <button
           class="bg-blue-50 text-blue-600 w-[2rem] h-[2rem] rounded-md flex items-center justify-center text-[1.4rem]"
-          role="button"
+          type="button"
           @click="$emit('next')"
+          :disabled="page === 5"
         >
           <i role="button" class="i-heroicons-chevron-right-20-solid" />
-        </small>
+        </button>
       </div>
     </div>
     <ul class="divide-y divide-gray-200">
