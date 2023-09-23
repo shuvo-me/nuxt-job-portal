@@ -3,7 +3,7 @@
     <div
       class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-[1.4rem] text-gray-500"
     >
-      <i class="bi bi-search" />
+      <i class="i-heroicons-magnifying-glass-20-solid" />
     </div>
     <input
       type="search"

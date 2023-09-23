@@ -1,6 +1,29 @@
 <template>
   <aside class="bg-white max-w-[30rem] p-4 rounded-md">
-    <h5 class="text-[1.6rem] font-semibold py-5 border-b">Related Jobs</h5>
+    <div class="flex items-center justify-between">
+      <h5
+        class="text-[1.6rem] font-semibold py-5 border-b"
+        v-text="'Related Jobs'"
+      />
+      <div class="flex items-center gap-x-2">
+        <small
+          class="bg-blue-50 text-blue-600 w-[2rem] h-[2rem] rounded-md flex items-center justify-center text-[1.4rem]"
+          role="button"
+          @click="$emit('prev')"
+        >
+          <i class="i-heroicons-chevron-left-20-solid" />
+        </small>
+
+        <small class="text-[1.3rem]" v-text="`${page}/3`" />
+        <small
+          class="bg-blue-50 text-blue-600 w-[2rem] h-[2rem] rounded-md flex items-center justify-center text-[1.4rem]"
+          role="button"
+          @click="$emit('next')"
+        >
+          <i role="button" class="i-heroicons-chevron-right-20-solid" />
+        </small>
+      </div>
+    </div>
     <ul class="divide-y divide-gray-200">
       <li v-for="job in jobLists" :key="job.job_id" class="py-[1.5rem]">
         <div class="flex gap-x-3 items-start">
@@ -51,5 +74,6 @@ import CompanyPlaceHolderLogo from "~/assets/images/company-place-holder.png";
 defineProps<{
   jobLists: JobDataTypes[] | null;
   pending: boolean;
+  page: number;
 }>();
 </script>
