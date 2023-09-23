@@ -10,11 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@egoist/tailwindcss-icons": "^1.0.3",
+    "@iconify/json": "^2.2.23",
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "nuxt": "^3.7.3"
   },
-  "dependencies": {
-    "bootstrap-icons": "^1.11.0"
-  }
+  "dependencies": {}
 }

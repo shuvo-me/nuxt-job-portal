@@ -1,3 +1,6 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <header class="py-5 bg-white">
     <nav class="flex justify-between items-center pb-3 px-4">
@@ -14,21 +17,16 @@
           class="flex items-center gap-x-[2rem] border-r border-gray-300 pr-[2rem]"
         >
           <li>
-            <span role="button" class="text-[1.8rem] text-black font-bold">
-              <i class="bi bi-bag" />
-            </span>
-          </li>
-          <li>
-            <span role="button" class="text-[1.8rem] text-black font-bold">
-              <i class="bi bi-bell" />
+            <span role="button" class="text-[2rem] text-black font-bold">
+              <i class="i-heroicons-bell" />
             </span>
           </li>
           <li>
             <span
               role="button"
-              class="text-[1.8rem] text-black font-bold relative"
+              class="text-[2rem] text-black font-bold relative"
             >
-              <i class="bi bi-envelope"></i>
+              <i class="i-heroicons-envelope"></i>
               <small
                 class="h-[1.4rem] w-[1.4rem] rounded-full text-[1rem] bg-red-600 text-white absolute top-[-0.3rem] right-[-0.7rem] flex items-center justify-center"
                 v-text="5"
@@ -79,8 +77,3 @@
   </header>
 </template>
 
-<script>
-</script>
-
-<style>
-</style>

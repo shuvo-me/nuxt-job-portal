@@ -26,7 +26,7 @@
 defineProps<{
   iconClass: string;
   optionTitle: string;
-  options: Array<{
+  options?: Array<{
     title: string;
     value: string;
   }>;

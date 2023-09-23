@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -15,7 +16,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss'
   ],
-  css: ['bootstrap-icons/font/bootstrap-icons.min.css'],
   runtimeConfig:{
     public:{
       apiKey: process.env.API_KEY,
