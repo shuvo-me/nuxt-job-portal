@@ -12,15 +12,31 @@
               class="w-[4.5rem] md:[5rem] rounded-md object-cover"
             />
           </div>
-          <div class="line-clamp-1">
+          <div class="">
             <h5
               v-text="job.job_title"
               class="text-[1.4rem] font-semibold opacity-90"
             />
-            <p class="text-[1.3rem] font-medium flex items-center gap-x-2">
+
+            <p
+              class="text-[1.3rem] font-medium flex items-center gap-x-2 line-clamp-1"
+            >
               <i class="i-heroicons-users" />
-              {{ job.employer_name }}
+              {{ job.employer_name || "unknown" }}
             </p>
+
+            <div class="flex mt-4 gap-x-4">
+              <small class="text-[1.3rem] flex items-center">
+                <i class="i-heroicons-map-pin" />
+                {{ job.job_country }}
+              </small>
+              <small
+                :class="`${
+                  job.job_is_remote ? 'badge-green' : 'badge-blue'
+                } px-1 rounded-full text-[1.1rem]`"
+                v-text="job.job_is_remote ? 'Remote' : 'Contact'"
+              />
+            </div>
           </div>
         </div>
         <!-- <div></div> -->

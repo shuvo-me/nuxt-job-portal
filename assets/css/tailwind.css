@@ -16,3 +16,11 @@ html,body{
 body{
     @apply bg-gray-100
 }
+
+.badge-green{
+    @apply bg-emerald-50 text-emerald-600
+}
+
+.badge-blue{
+    @apply bg-blue-50 text-blue-600
+}
