@@ -1,5 +1,5 @@
 <template>
-  <aside class="bg-white max-w-[30rem] p-4 rounded-md">
+  <aside class="bg-white max-w-[25rem] p-4 rounded-md">
     <div class="flex items-center justify-between">
       <h5
         class="text-[1.6rem] font-semibold py-5 border-b"
@@ -26,26 +26,27 @@
         </button>
       </div>
     </div>
-    <ul class="divide-y divide-gray-200">
+    <ul v-if="pending" class="min-w-[23rem]">
+      <li v-for="i in [...new Array(5)]" :key="i" class="py-[1.5rem]">
+        <job-list-skeleton-loader />
+      </li>
+    </ul>
+    <ul class="divide-y divide-gray-200" v-else>
       <li v-for="job in jobLists" :key="job.job_id" class="py-[1.5rem]">
         <div class="flex gap-x-3 items-start">
-          <div>
-            <img
-              @error="$companyErrorLogo"
-              :src="job?.employer_logo || CompanyPlaceHolderLogo"
-              alt="job employer"
-              class="w-[4.5rem] md:[5rem] rounded-md object-cover"
-            />
-          </div>
+          <img
+            @error="$companyErrorLogo"
+            :src="job?.employer_logo || CompanyPlaceHolderLogo"
+            alt="job employer"
+            class="w-[5rem] rounded-md object-cover"
+          />
           <div class="">
             <h5
               v-text="job.job_title"
-              class="text-[1.4rem] font-semibold opacity-90"
+              class="text-[1.3rem] font-semibold opacity-90 line-clamp-1"
             />
 
-            <p
-              class="text-[1.3rem] font-medium flex items-center gap-x-2 line-clamp-1"
-            >
+            <p class="text-[1.3rem] font-medium flex items-center gap-x-2">
               <i class="i-heroicons-users" />
               {{ job.employer_name || "unknown" }}
             </p>

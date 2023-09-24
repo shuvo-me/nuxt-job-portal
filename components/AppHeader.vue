@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <header class="py-5 bg-white">
+  <header class="py-5 pb-0 bg-white">
     <nav class="flex justify-between items-center pb-3 px-4">
       <div class="flex items-center">
         <img
@@ -34,17 +34,10 @@
             </span>
           </li>
         </ul>
-        <div role="button">
-          <img
-            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
-            alt="profile img"
-            class="h-[3rem] w-[3rem] rounded-full object-cover"
-          />
-        </div>
       </div>
     </nav>
     <div class="mt-3 bg-gray-50 p-10">
-      <form action="">
+      <form action="#">
         <div
           class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-10 lg:gap-y-0"
         >
