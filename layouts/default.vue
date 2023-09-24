@@ -2,7 +2,7 @@
   <app-container extra-class="mt-[80px] rounded-md">
     <app-header />
 
-    <div class="flex max-h-[calc(100vh-40%)] overflow-y-auto mt-5">
+    <div class="flex max-h-[calc(100vh-40%)] overflow-y-auto mt-5 gap-x-10">
       <jobs-sidebar
         :job-lists="data"
         :pending="pending"

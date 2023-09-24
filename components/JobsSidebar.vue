@@ -1,5 +1,5 @@
 <template>
-  <aside class="bg-white max-w-[25rem] p-4 rounded-md">
+  <aside class="bg-white w-[25rem] p-4 rounded-md">
     <div class="flex items-center justify-between">
       <h5
         class="text-[1.6rem] font-semibold py-5 border-b"
@@ -26,14 +26,14 @@
         </button>
       </div>
     </div>
-    <ul v-if="pending" class="min-w-[23rem]">
-      <li v-for="i in [...new Array(5)]" :key="i" class="py-[1.5rem]">
+    <ul v-if="!pending" class="w-[23rem]">
+      <li v-for="i in [...new Array(7)]" :key="i" class="py-[1.5rem]">
         <job-list-skeleton-loader />
       </li>
     </ul>
     <ul class="divide-y divide-gray-200" v-else>
       <li v-for="job in jobLists" :key="job.job_id" class="py-[1.5rem]">
-        <div class="flex gap-x-3 items-start">
+        <nuxt-link class="flex gap-x-3 items-start" :to="`/job/${job.job_id}`">
           <img
             @error="$companyErrorLogo"
             :src="job?.employer_logo || CompanyPlaceHolderLogo"
@@ -64,7 +64,7 @@
               />
             </div>
           </div>
-        </div>
+        </nuxt-link>
         <!-- <div></div> -->
       </li>
     </ul>
