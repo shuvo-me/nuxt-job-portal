@@ -25,3 +25,15 @@ body{
     @apply bg-blue-50 text-blue-600
 }
 
+
+
+.custom-bullet dd{
+    padding-left: 1.6rem;
+    position: relative;
+}
+.custom-bullet dd::before{
+    content: '>';
+    position: absolute;
+    top: 0;
+    left: 0;
+}

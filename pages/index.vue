@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full rounded-md overflow-x-hidden">
+  <div class="w-full rounded-md overflow-x-hidden bg-white">
     <div
       class="bg-[url('https://template.canva.com/EAENvp21inc/1/0/1600w-qt_TMRJF4m0.jpg')] min-h-[10vh] bg-center bg-no-repeat bg-cover"
     />
-    <div>
+    <div class="px-7">
       <div class="left">
         <div class="flex items-center p-5 border-b">
           <img
@@ -48,13 +48,13 @@
           </div>
         </div>
         <div class="space-y-4 mt-4">
-          <div>
-            <h6
-              class="text-[1.6rem] font-semibold"
+          <dl>
+            <dt
+              class="text-[1.4rem] font-semibold"
               v-text="'Job Description:'"
             />
-            <p
-              class="text-gray-700 text-[1.3rem] leading-[2.2rem] line-clamp-3"
+            <dl
+              class="text-gray-700 text-[1.4rem] leading-[2.2rem] line-clamp-3"
             >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
               ipsa aut earum rem obcaecati consequatur molestiae? Aperiam
@@ -70,21 +70,38 @@
               dolor iure recusandae, itaque culpa quisquam beatae reiciendis!
               Unde amet magni fuga excepturi eaque quidem saepe aspernatur?
               Veniam cumque aperiam qui reiciendis
-            </p>
-          </div>
-          <div>
-            <h6
-              class="text-[1.6rem] font-semibold"
+            </dl>
+          </dl>
+          <dl class="custom-bullet">
+            <dt
+              class="text-[1.4rem] font-semibold"
               v-text="'Key Responsibilities:'"
             />
-            <ul class="list-disc">
-              <li>Lorem ipsum dolor sit amet.</li>
-              <li>Lorem ipsum dolor sit amet.</li>
-              <li>Lorem ipsum dolor sit amet.</li>
-              <li>Lorem ipsum dolor sit amet.</li>
-              <li>Lorem ipsum dolor sit amet.</li>
-            </ul>
-          </div>
+
+            <dd
+              v-for="i in [...new Array(4)]"
+              :key="i"
+              class="text-[1.3rem] text-gray-700 my-2 line-clamp-2"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Pariatur, nemo.Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Pariatur, nemo.Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Pariatur, nemo.Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Pariatur, nemo.Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Pariatur, nemo.
+            </dd>
+          </dl>
+        </div>
+        <div class="mt-5">
+          <dl>
+            <dt class="text-[1.4rem] font-semibold mb-2">Requred skill:</dt>
+            <dd
+              v-for="skill in skills"
+              :key="skill"
+              v-text="skill"
+              class="bg-blue-100 text-blue-600 inline-block mx-2 text-[1.2rem] px-2 rounded-full capitalize"
+            />
+          </dl>
         </div>
       </div>
       <div class="right"></div>
@@ -93,6 +110,13 @@
 </template>
 
 <script setup lang="ts">
+const skills = ref([
+  "wireframing",
+  "figma",
+  "adobe xd",
+  "ui/ux design",
+  "team work",
+]);
 </script>
 
 <style>
